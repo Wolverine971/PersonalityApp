@@ -1,0 +1,255 @@
+﻿<div class="container">
+    <h1>Edit Profile</h1>
+    <hr>
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-3">
+            <a href="#myModal" role="button" class="btn btn-default" data-toggle="modal">Launch demo modal</a>
+
+            <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel">Modal header</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p>One fine body…</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                            <button class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div><a href="#" class="btn btn-default" id="openBtn">Open modal</a>
+
+            <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h3>Modal header</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p>My modal content here…</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+                <h6>Upload a different photo...</h6>
+
+                <input type="file" class="form-control" file-model="uPC.person.photo">
+            </div>
+        </div>
+
+        <!-- edit form column -->
+        <div class="col-md-9 personal-info">
+            <div class="alert alert-info alert-dismissable">
+                <a class="panel-close close" data-dismiss="alert">×</a>
+                <i class="fa fa-coffee"></i>
+                This is an <strong>.alert</strong>. Use this to show important messages to the user.
+            </div>
+            <h3>Personal info</h3>
+            <!--<pre>{{ uPC.person | JSON }}</pre>-->
+
+
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">First name:</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" ng-model="uPC.person.firstName" value="Jane">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Last name:</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" ng-model="uPC.person.lastName" value="Bishop">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">DBO:</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" ng-model="uPC.person.friendlyDbo" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Sex:</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" ng-model="uPC.person.sex" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Email:</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" ng-model="uPC.person.email">
+                    </div>
+                </div>
+
+
+
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link dropdown-toggle" data-toggle="collapse" data-target="#job" aria-expanded="true" aria-controls="job">
+                                Job
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="job" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <input class="form-control" ng-model="uPC.person.job.jobStatus" placeholder="Job Status" />
+                                <input class="form-control" ng-model="uPC.person.job.jobTitle" placeholder="Job Title" />
+                                <input class="form-control" ng-model="uPC.person.job.industry" placeholder="Job Industry" />
+                                <input class="form-control" ng-model="uPC.person.job.yearsExperience" placeholder="Years in Field" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link dropdown-toggle" data-toggle="collapse" data-target="#personality" aria-expanded="true" aria-controls="personality">
+                                Personality
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="personality" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <input class="form-control" ng-model="uPC.person.personality.mbti" placeholder="MBTI" />
+                                <input class="form-control" ng-model="uPC.person.personality.role" placeholder="Role" />
+                                <input class="form-control" ng-model="uPC.person.personality.strategy" placeholder="Strategy" />
+                                <input class="form-control" ng-model="uPC.person.personality.name" placeholder="Personality Name" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link dropdown-toggle" data-toggle="collapse" data-target="#loveLife" aria-expanded="true" aria-controls="loveLife">
+                                Love Life
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="loveLife" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <input class="form-control" ng-model="uPC.person.loveLife.relationshipStatus.status" placeholder="Relationship Status" />
+                                <input class="form-control" ng-model="uPC.person.loveLife.lengthOfStatus" placeholder="Length of Status" />
+
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link dropdown-toggle" data-toggle="collapse" data-target="#loveMakingStyle" aria-expanded="true" aria-controls="loveMakingStyle">
+                                                Love Making Preference
+                                            </button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="loveMakingStyle" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <input class="form-control" ng-model="uPC.person.loveLife.loveMakingPreference.preference" placeholder="Love Making Preference In One Word" />
+                                                <input class="form-control" ng-model="uPC.person.loveLife.loveMakingPreference.description" placeholder="Love Making Style Description" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+                                <div class="card" ng-hide="uPC.person.loveLife.relationshipStatus.status == 'single'">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link dropdown-toggle" data-toggle="collapse" data-target="#partner" aria-expanded="true" aria-controls="partner">
+                                                Partner
+                                            </button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="partner" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <input class="form-control" ng-model="uPC.person.loveLife.partner.age" placeholder="Partner Age" />
+                                                <input class="form-control" ng-model="uPC.person.loveLife.partner.sex" placeholder="Partner Sex" />
+                                                <div class="card">
+                                                    <div class="card-header" id="headingOne">
+                                                        <h5 class="mb-0">
+                                                            <button class="btn btn-link dropdown-toggle" data-toggle="collapse" data-target="#partnerJob" aria-expanded="true" aria-controls="partnerJob">
+                                                                Partner Job
+                                                            </button>
+                                                        </h5>
+                                                    </div>
+
+                                                    <div id="partnerJob" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <div class="form-group">
+                                                                <input class="form-control" ng-model="uPC.person.loveLife.partner.job.jobStatus" placeholder="Partner Job Status" />
+                                                                <input class="form-control" ng-model="uPC.person.loveLife.partner.job.jobTitle" placeholder="Partner Job Title" />
+                                                                <input class="form-control" ng-model="uPC.person.loveLife.partner.job.industry" placeholder="Partner Job Industry" />
+                                                                <input class="form-control" ng-model="uPC.person.loveLife.partner.job.yearsExperience" placeholder="Partner Years Experience" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header" id="headingOne">
+                                                        <h5 class="mb-0">
+                                                            <button class="btn btn-link dropdown-toggle" data-toggle="collapse" data-target="#partnerPersonality" aria-expanded="true" aria-controls="partnerPersonality">
+                                                                Partner Personality
+                                                            </button>
+                                                        </h5>
+                                                    </div>
+
+                                                    <div id="partnerPersonality" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <div class="form-group">
+                                                                <input class="form-control" ng-model="uPC.person.loveLife.partner.personality.mbti" placeholder="Partner MBTI" />
+                                                                <input class="form-control" ng-model="uPC.person.loveLife.partner.personality.role" placeholder="Partner Role" />
+                                                                <input class="form-control" ng-model="uPC.person.loveLife.partner.personality.strategy" placeholder="Partner Strategy" />
+                                                                <input class="form-control" ng-model="uPC.person.loveLife.partner.personality.name" placeholder="Partner Personality Name" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-8">
+                        <input type="button" class="btn btn-primary" ng-click="uPC.save(uPC.person)" value="Save Changes">
+                        <span></span>
+                        <input type="reset" class="btn btn-default" value="Cancel">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<hr>

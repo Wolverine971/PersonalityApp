@@ -1,0 +1,82 @@
+﻿
+    <div class="container" style="display:flex;background-color:black">
+
+        <a ui-sref="job" id="job" style="color:white;" onmouseover="this.style.color='aqua'" onMouseOut="this.style.color='white'">Job</a>
+
+        <a ui-sref="love" id="love" style="color:white;" onmouseover="this.style.color='aqua'" onMouseOut="this.style.color='white'">Love</a>
+    </div>
+    <script type="text/javascript">
+        var colors = ["blue", "red", "yellow", "green"];
+
+        $(document).ready(function () {
+            $("#job").on("hover", hoverAnimation);
+            animateMe();
+        });
+
+        const random = function () {
+            let x = math.random();
+            let y = math.random();
+            return x, y;
+        }
+
+        //const locationChange = function (x, y) {
+
+        //}
+        var animateMe = function () {
+            $("#job")
+        }
+        var hoverAnimation = function () {
+            var j;
+            switch (j) {
+                case 0:
+                    j = 0 || undefined || null;
+                    $("#job").color() = changeColor();
+                    $("#job").animate({
+                        left: '20px'
+                    });
+                    break;
+                case 1:
+                    j = 1;
+                    $("#job").color() = changeColor();
+                    $("#job").animate({
+                        up: '20px'
+                    });
+                    break;
+                case 2:
+                    j = 2;
+                    $("#job").color() = changeColor();
+                    $("#job").animate({
+                        right: '20px'
+                    });
+                    break;
+                case 3:
+                    j = 3;
+                    $("#job").color() = changeColor();
+                    $("#job").animate({
+                        down: '20px'
+                    });
+                    break;
+
+            }
+            j++
+            i();
+            $("#job").color() = changeColor();
+        }
+
+        var changeColor = function () {
+            var i = 0;
+            i < colors.length;
+            return colors[i] && i++;
+            
+        }
+
+        var i = function () {
+            for (var i = 0; i < colors.length; i++) {
+                if (i = 0) {
+                    i++;
+                }
+
+            }
+        }
+
+    </script>

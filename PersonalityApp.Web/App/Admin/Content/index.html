@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PersonalityApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="SideBar.css" />
+    <link href="angular-moment-picker.min.css" rel="stylesheet" />
+</head>
+<body ng-app="personalityApp" ng-controller="indexController as indexVm">
+    <div class="container-fluid">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+            <div class="collapse navbar-collapse stary" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref="home">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" ui-sref="stary">Stary</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" ui-sref="account">Accounts</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="What do you want">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn pull-right" ng-click="indexVm.logout" type="button">LogOut</button>
+                </form>
+            </div>
+        </nav>
+
+
+        <div class="" style="display:flex">
+            <!--<div class="wrapper" ng-show="indexVm.currentUser">
+                <nav id="sidebar" ng-class="indexVm.sideBarToggle">
+
+                    <div class="sidebar-header" ng-click="indexVm.toggleSideBar()">
+                        <h3 ng-bind="indexVm.currentUser.firstName + ' ' +indexVm.currentUser.lastName">Name</h3>
+                        <strong>BS</strong>
+                        <div class="sp-pic">
+                            <img ng-src="{{indexVm.currentUser.photoUrl}}" alt="no image" />
+                        </div>
+                        <button type="button" id="sidebarCollapse" class="btn btn-xs">
+                            <i class="glyphicon" ng-class="indexVm.sideBarImg"></i>
+                        </button>
+                    </div>
+
+                    <ul class="list-unstyled components">
+                        <li>
+                            <a style="cursor: pointer"
+                               ng-click="indexVm.goToMyHome()"
+                               ui-sref-active="active">
+                                <i class="glyphicon glyphicon-home"></i>Home
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page 1-1</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-send"></i>
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div id="content">
+                </div>
+
+            </div>-->
+
+            <div class="wrapper" ng-show="indexVm.currentUser">
+                <nav id="sidebar" ng-class="indexVm.sideBarToggle">
+                    <div class="sidebar-header" ng-click="indexVm.toggleSideBar()">
+                        <h3 ng-bind="indexVm.currentUser.firstName + ' ' +indexVm.currentUser.lastName">Name</h3>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="cursor: pointer" ng-click="indexVm.goToMyHome()" ui-sref-active="active">
+                                <i class="glyphicon glyphicon-home"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ng-click="indexVm.goToMyProfile()" href=""
+                               ui-sref-active="active">
+                                <i class="glyphicon glyphicon-user"></i>
+                                My Profile
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="glyphicon glyphicon-briefcase"></i>
+                                About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                Personality<i class="caret" style="color:brown"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Overview</a>
+                                <a class="dropdown-item" href="#">Careers</a>
+                                <a class="dropdown-item" href="#">Relationships</a>
+                                <a class="dropdown-item" href="#">Lifestyles</a>
+                                <a class="dropdown-item" href="#">Strengths and Weaknesses</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="glyphicon glyphicon-briefcase"></i>
+                                Share
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+
+
+
+            <div class="container-fluid">
+                <p>UI VIEW</p>
+                <ui-view>
+
+                </ui-view>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <script src="Moment.js"></script>
+
+    <script src="personalityApp.js"></script>
+
+    <script src="stary/staryComponent.js"></script>
+    <script src="stary/staryController.js"></script>
+
+    <script src="Account/AccountComponent.js"></script>
+    <script src="Account/AccountController.js"></script>
+    <script src="Account/AccountService.js"></script>
+
+    <script src="UserHome/UserHomeComponent.js"></script>
+    <script src="UserHome/UserHomeController.js"></script>
+    <script src="UserHome/UserHomeService.js"></script>
+
+    <script src="Login/LoginComponent.js"></script>
+    <script src="Login/LoginController.js"></script>
+    <script src="Login/LoginService.js"></script>
+
+
+    <script src="UserProfile/UserProfileComponent.js"></script>
+    <script src="UserProfile/UserProfileController.js"></script>
+    <script src="UserProfile/UserProfileService.js"></script>
+
+    <script src="WordLookUp/WordLookUpService.js"></script>
+
+    <script src="IndexController.js"></script>
+    <script src="UserService.js"></script>
+    <script src="Directives/fileModel.js"></script>
+
+
+
+
+    <script src="angular-moment-picker.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+
+
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+</body>
+</html>
