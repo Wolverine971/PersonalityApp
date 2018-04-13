@@ -2,9 +2,39 @@
 <h1>{{uHC.banner}}</h1>
 <p>You are {{uHC.name}}</p>
 <div class="form-group">
-    <label class="form-label">What are you interested in?</label>
-    <input class="form-control" type="text" ng-model="uHC.word" />
+    <label class="form-label">What do you need to figure out?</label>
+    <input class="form-control" type="text" ng-model="uHC.word.fOut" />
+    <label class="form-label">What could you use help with?</label>
+    <input class="form-control" type="text" ng-model="uHC.word.help" />
+    <label class="form-label">What problem are you trying to solve?</label>
+    <input class="form-control" type="text" ng-model="uHC.word.solve" />
     <input type="button" class="btn btn-primary" ng-click="uHC.submitWord(uHC.word)" value="Word Lookup">
 </div>
 
-<input type="text" ng.model="uHC.name"/>
+<div class="container-flex" style="display:flex;justify-content:space-around;">
+    <div class="col-md-2" ng-show="uHC.fOut">
+        <label class="form-label">You want to figure out {{uHC.word.fOut}}?</label>
+        <ul ng-repeat="items in uHC.fOut">
+            <li>
+                {{items}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-2" ng-show="uHC.help">
+        <label class="form-label">You need help with {{uHC.word.help}}?</label>
+        <ul ng-repeat="item in uHC.help">
+            <li>
+                {{item}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-2" ng-show="uHC.solve">
+        <label class="form-label">So you trying to solve {{uHC.word.solve}}? This too?</label>
+        <ul ng-repeat="itemx in uHC.solve">
+            <li>
+                {{itemx}}
+            </li>
+        </ul>
+    </div>
+
+</div>

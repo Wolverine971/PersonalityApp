@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace WordsAPI.Model
+namespace Domain.WordModel
 {
     public class Definition
     {

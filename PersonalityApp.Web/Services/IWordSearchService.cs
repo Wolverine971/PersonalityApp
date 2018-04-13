@@ -2,14 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
-using WordsAPI.Model;
+using Domain.WordModel;
 
 namespace PersonalityApp.Web.Services
 {
     public interface IWordSearchService
     {
-        DetailsResponse GetWordDefinitions(WordRequest model);
-        DetailsResponse GetWordSynonyms(WordRequest model);
+        List<DetailsResponse> GetSynonyms(WordRequest model);
+        string GetResponse(WebRequest client);
     }
 }

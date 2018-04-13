@@ -7,6 +7,6 @@ namespace PersonalityApp.Web.Domain
 {
     public class WordRequest
     {
-        public string Word { get; set; }
+        public String[] Word { get; set; }
     }
 }

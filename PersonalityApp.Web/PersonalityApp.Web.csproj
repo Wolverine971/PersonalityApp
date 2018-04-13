@@ -176,13 +176,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\WordController.cs" />
+    <Compile Include="Domain\Node.cs" />
     <Compile Include="WordsAPI\ApiException.cs" />
     <Compile Include="WordsAPI\ApiInvoker.cs" />
     <Compile Include="WordsAPI\Api\WordsApi.cs" />
-    <Compile Include="WordsAPI\Model\Definition.cs" />
-    <Compile Include="WordsAPI\Model\DetailsResponse.cs" />
-    <Compile Include="WordsAPI\Model\Result.cs" />
-    <Compile Include="WordsAPI\Model\WordResponse.cs" />
+    <Compile Include="Domain\WordModel\Definition.cs" />
+    <Compile Include="Domain\WordModel\DetailsResponse.cs" />
+    <Compile Include="Domain\WordModel\Result.cs" />
+    <Compile Include="Domain\WordModel\WordResponse.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
@@ -191,7 +193,6 @@
     <Compile Include="Controllers\PersonalityController.cs" />
     <Compile Include="Controllers\SecurityTokenApiController.cs" />
     <Compile Include="Controllers\UserApiController.cs" />
-    <Compile Include="Controllers\WordLookupController.cs" />
     <Compile Include="Domain\AccountIsEmailConfirmed.cs" />
     <Compile Include="Domain\AccountRegistrationRetrieval.cs" />
     <Compile Include="Domain\AccountSalt.cs" />

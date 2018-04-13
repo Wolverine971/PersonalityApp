@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using WordsAPI;
-using WordsAPI.Model;
+using Domain.WordModel;
 namespace WordsAPI.Api
 {
     public class WordsApi

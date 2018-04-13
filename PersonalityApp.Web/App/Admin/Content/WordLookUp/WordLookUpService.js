@@ -5,10 +5,10 @@
 
     function WordLookUpService($http, $q) {
         return {
-            post: _post,
+            syn: _syn,
         };
 
-        function _post(data) {
+        function _syn(data) {
             var settings = {
                 url: "/api/word/syn",
                 method: 'POST',
