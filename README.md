@@ -5,7 +5,7 @@ Ultimately I want to foster community growth through making people aware that ev
 1. Think what we think
 2. Feel what we feel
 3. See what we see
-4  Recognize what we recognize
+4.  Recognize what we recognize
 5. Make decisions the way we make decisions
 6. Want to spend time alone or with other people the way we do
 
