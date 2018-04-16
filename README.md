@@ -19,7 +19,7 @@ Example:
 Question: What problem do you want to solve?
 User1: Love
 User2: Peace
-Both answers are global in nature and suggest big thinking, so I want to be able to Id that commonality and make some kind of relationship structure to store. The scope of the question is to broad so to draw better directed answers I could have a drop down of some predefined answers that they choose.
+Both answers are global in nature and suggest big thinking, so I want to be able to Id that commonality and make some kind of relationship structure to store that. The scope of the question is too broad so to draw better directed answers I could have a drop down of some predefined answers that they choose.
 This is opposed to 2 users who answer, Homework, and Singleness. Where there is likely no commonality or similarity to draw upon.
 
 So I need to index these answers and get some kind of data structure going. Having just talked this out I think the drop downs are probably the best.
